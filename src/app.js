@@ -47,7 +47,7 @@ app.get("/weather",(req,res)=>{
             error:"no address"
         })
     }
-    geoCode(req.query.address,(error,{location,longitude,lititude})=>{
+    geoCode(req.query.address,(error,{location,longitude,lititude}={})=>{
         if(error){
             return res.send({error})
         }
